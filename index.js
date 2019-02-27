@@ -3,24 +3,24 @@ const toAnsii = require('./lib/image-to-ansii');
 /**
  * Console Art
  *
- * Converts popular image formats into a console-compatible
+ * Converts popular image formats into a terminal-compatible
  * low-resolution replica, the output of which can be printed
- * directly to the console.
+ * directly to the terminal.
  *
  * @example
  *
  *  // straight to print
- *  const consoleArt = require('console-art');
- *  consoleArt.print(
+ *  const terminalArt = require('terminal-art');
+ *  terminalArt.print(
  *      'my-image.png',
  *      {
  *          output: 'log', // console.log
- *          maxCharWidth: 20 // my console is only 20 characters wide
+ *          maxCharWidth: 20 // my terminal is only 20 characters wide
  *      }
  *  );
  *
  *  // for use later (store as a file which can be cat'd or similar)
- *  const ansii = consoleArt.toAnsii(
+ *  const ansii = terminalArt.toAnsii(
  *      'my-image',
  *      {
  *          maxCharWidth: 100

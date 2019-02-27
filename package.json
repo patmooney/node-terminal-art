@@ -1,7 +1,7 @@
 {
-  "name": "console-art",
+  "name": "terminal-art",
   "version": "0.0.1",
-  "description": "Convert popular image formats into console compatible ansii art",
+  "description": "Convert popular image formats into terminal compatible ansii art",
   "main": "index.js",
   "directories": {
     "lib": "lib"
@@ -11,19 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patmooney/node-console-art.git"
+    "url": "git+https://github.com/patmooney/node-terminal-art.git"
   },
   "keywords": [
     "ansii",
     "image",
-    "console"
+    "terminal"
   ],
   "author": "patmooney",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/patmooney/node-console-art/issues"
+    "url": "https://github.com/patmooney/node-terminal-art/issues"
   },
-  "homepage": "https://github.com/patmooney/node-console-art#readme",
+  "homepage": "https://github.com/patmooney/node-terminal-art#readme",
   "dependencies": {
     "get-pixels": "^3.3.2"
   },
