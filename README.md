@@ -1,4 +1,4 @@
- # Node Terminal Art #
+# Node Terminal Art #
 
 Converts popular image formats into a terminal-compatible low-resolution replica, the output of which can be printed directly to the terminal. I have previously used it to print out an embedded company logo within proprietary software on startup.
 
