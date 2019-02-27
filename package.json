@@ -1,0 +1,34 @@
+{
+  "name": "console-art",
+  "version": "0.0.1",
+  "description": "Convert popular image formats into console compatible ansii art",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patmooney/node-console-art.git"
+  },
+  "keywords": [
+    "ansii",
+    "image",
+    "console"
+  ],
+  "author": "patmooney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patmooney/node-console-art/issues"
+  },
+  "homepage": "https://github.com/patmooney/node-console-art#readme",
+  "dependencies": {
+    "get-pixels": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}
