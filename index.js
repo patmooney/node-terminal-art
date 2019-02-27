@@ -1,4 +1,4 @@
-const toAnsii = require('./lib/image-to-ansii');
+const imageToAnsii = require('./lib/image-to-ansii');
 
 /**
  * Console Art
@@ -11,7 +11,7 @@ const toAnsii = require('./lib/image-to-ansii');
  *
  *  // straight to print
  *  const terminalArt = require('terminal-art');
- *  terminalArt.print(
+ *  await terminalArt.print(
  *      'my-image.png',
  *      {
  *          output: 'log', // console.log
@@ -20,7 +20,7 @@ const toAnsii = require('./lib/image-to-ansii');
  *  );
  *
  *  // for use later (store as a file which can be cat'd or similar)
- *  const ansii = terminalArt.toAnsii(
+ *  const ansii = await terminalArt.toAnsii(
  *      'my-image',
  *      {
  *          maxCharWidth: 100
@@ -30,10 +30,10 @@ const toAnsii = require('./lib/image-to-ansii');
 module.exports = {
     async print(path, options = {}) {
         console[options.output || 'log'](
-            "\n" + await toAnsii(path, options.maxCharWidth)
+            "\n" + await imageToAnsii(path, options.maxCharWidth)
         );
     },
     toAnsii(path, options = {}) {
-        return toAnsii(path, options.maxCharWidth);
+        return imageToAnsii(path, options.maxCharWidth);
     }
 };
