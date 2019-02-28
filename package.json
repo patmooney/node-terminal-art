@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/patmooney/node-terminal-art#readme",
   "dependencies": {
-    "chai-as-promised": "^7.1.1",
     "get-pixels": "^3.3.2"
   },
   "devDependencies": {
+    "chai-as-promised": "^7.1.1",
     "chai": "^4.2.0",
     "mocha": "^6.0.2"
   }
