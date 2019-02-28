@@ -21,19 +21,20 @@ const imageToAnsii = require('./lib/image-to-ansii');
  *
  *  // for use later (store as a file which can be cat'd or similar)
  *  const ansii = await terminalArt.toAnsii(
- *      'my-image',
+ *      myImageBuffer,
  *      {
- *          maxCharWidth: 100
+ *          maxCharWidth: 100,
+ *          mimeType: 'image/png'
  *      }
  *  );
  */
 module.exports = {
     async print(path, options = {}) {
         console[options.output || 'log'](
-            "\n" + await imageToAnsii(path, options.maxCharWidth)
+            "\n" + await imageToAnsii(path, options)
         );
     },
     toAnsii(path, options = {}) {
-        return imageToAnsii(path, options.maxCharWidth);
+        return imageToAnsii(path, options);
     }
 };
