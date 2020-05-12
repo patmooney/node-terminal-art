@@ -1,13 +1,15 @@
 const s = require('../index');
 const runs = 20;
 const input = process.argv[2];
+const minDist = parseInt(process.argv[3] || 5);
+
 if (!input) {
     console.error('Input image path required');
     process.exit(1);
 }
 
-runTest(() => s.toAnsii(process.argv[2])).then(console.log);
-
+runTest(() => s.toAnsii(process.argv[2], { minDist })).then(console.log);
+s.print(process.argv[2], { minDist });
 async function runTest(test) {
     const results = [];
     for (let tI = 0; tI < 20; tI++){
