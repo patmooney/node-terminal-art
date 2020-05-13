@@ -19,12 +19,10 @@ describe('UNIT - toAnsi', function () {
     });
 
     it('Should appropriately limit the size of an image', async function () {
-        const imageWidth = 1000;
-        const columns = process.stdout.columns * 0.75;
-        const expectedWidth = Math.ceil(imageWidth / Math.ceil(imageWidth / columns));
-        const ansii = await terminalArt.toAnsii(longPath);
+        const imageWidth = 1000, columns = 100;
+        const ansii = await terminalArt.toAnsii(longPath, { maxCharWidth: columns });
         const filling = ansii.split("\n")[0].match(/\s/g);
-        expect(filling.length).to.equal(expectedWidth);
+        expect(filling.length).to.equal(columns);
     });
 
     it('Should accept a buffer', async function () {
