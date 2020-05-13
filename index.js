@@ -31,7 +31,7 @@ const imageToAnsii = require('./lib/image-to-ansii');
 module.exports = {
     async print(path, options = {}) {
         console[options.output || 'log'](
-            "\n" + await imageToAnsii(path, options)
+            "\n" + await imageToAnsii(path, options) // eslint-disable-line quotes
         );
     },
     toAnsii(path, options = {}) {
