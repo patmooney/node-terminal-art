@@ -5,8 +5,8 @@ const expect = chai.expect;
 describe('UNIT - toAnsi', function () {
     const terminalArt = require('../index');
 
-    const sampleAnsii = '\u001b[0m\u001b[48;5;9m\u001b[38;5;9m \u001b[0m'
-            + '\u001b[48;5;10m\u001b[38;5;10m \u001b[0m\n';
+    const sampleAnsii = '\u001b[0m\u001b[48;5;9m\u001b[38;5;9m \u001b[0m' +
+            '\u001b[48;5;10m\u001b[38;5;10m \u001b[0m\n';
     const sampleBuffer = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAACXBIWXM' +
         'AAAsTAAALEwEAmpwYAAAAB3RJTUUH4wIbCwoYRArfTwAAABl0RVh0Q29tbWVudABDcmVhdGV' +
         'kIHdpdGggR0lNUFeBDhcAAAAWSURBVAjXY/jPwMDwn4GRgeH///8MAB72BP1IxgkfAAAAAElFTkSuQmCC', 'base64');
@@ -19,9 +19,9 @@ describe('UNIT - toAnsi', function () {
     });
 
     it('Should appropriately limit the size of an image', async function () {
-        const imageWidth = 1000, columns = 100;
+        const columns = 100;
         const ansii = await terminalArt.toAnsii(longPath, { maxCharWidth: columns });
-        const filling = ansii.split("\n")[0].match(/\s/g);
+        const filling = ansii.split('\n')[0].match(/\s/g);
         expect(filling.length).to.equal(columns);
     });
 

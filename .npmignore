@@ -2,3 +2,4 @@ test/
 docs/
 extest/
 imgs/
+.eslintrc.json

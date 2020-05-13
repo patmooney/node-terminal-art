@@ -12,7 +12,7 @@ runTest(() => s.toAnsii(process.argv[2], { minDist })).then(console.log);
 s.print(process.argv[2], { minDist });
 async function runTest(test) {
     const results = [];
-    for (let tI = 0; tI < 20; tI++){
+    for (let tI = 0; tI < runs; tI++) {
         const start = Date.now();
         await test();
         results.push(Date.now() - start);
