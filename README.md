@@ -21,15 +21,6 @@ Converts popular image formats into a terminal-compatible low-resolution replica
 
 ### API ###
 
-#### `print(filePath, { maxCharWidth: 40, output: 'log' }) -> Promise`
-Convenience method which outputs ansii directly to console.log
-##### Arguments
- - **filePath | imageBuffer** - for your desired image
- - **options**
-    - **output** [default='log'] - console method to print to
-    - **maxCharWidth** [default=(process.stdout.columns * 0.75)] - Appropximate width of terminal in characters (dictates image size/resolution)
-    - **mimeType** - Required for image buffers
-
 #### `toAnsii(filePath, { maxCharWidth: 40 }) -> Promise.<string>`
 Extracts colour information from given image and returns a lower-resolution ansii representation in string format
 ##### Arguments
