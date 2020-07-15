@@ -9,18 +9,6 @@ Converts popular image formats into a terminal-compatible low-resolution replica
 ![Example image](docs/example.png)
 
 ### Usage ###
-Straight to print
-
-    const terminalArt = require('terminal-art');
-    await terminalArt.print(
-        'my-image.png',
-        {
-            output: 'log', // console.log
-            maxCharWidth: 20 // my terminal is only 20 characters wide
-        }
-    );
-
-For use later (store as a file which can be cat'd or similar)
 
     const ansii = await terminalArt.toAnsii(
         myImageBuffer,
@@ -29,6 +17,7 @@ For use later (store as a file which can be cat'd or similar)
             mimeType: 'image/png'
         }
     );
+    console.log(ansii);
 
 ### API ###
 
