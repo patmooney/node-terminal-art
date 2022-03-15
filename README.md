@@ -62,3 +62,11 @@ Extracts colour information from given image and returns a lower-resolution ansi
  - `options`
     - `maxCharWidth` [default=(process.stdout.columns * 0.75)] - Appropximate width of terminal in characters (dictates image size/resolution)
     - `mimeType` - Required for image buffers
+
+#### `toAnsiiFrames(filePath, { maxCharWidth?: 40, mimeType?: 'image/gif' }): Promise<string[]>`
+Extracts colour information from given image/gif and returns an array of lower-resolution ansii representation in string format
+##### Arguments
+ - `filePath | imageBuffer` - for your desired image
+ - `options`
+    - `maxCharWidth` [default=(process.stdout.columns * 0.75)] - Appropximate width of terminal in characters (dictates image size/resolution)
+    - `mimeType` - Required for image buffers
