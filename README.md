@@ -10,6 +10,10 @@ Converts popular image formats into a terminal-compatible low-resolution replica
 
 ### Usage ###
 
+    // Simple, uses 75% of the current terminal width.
+    toAnsii('/path/to/img').then(console.log);
+
+    // From Buffer + size stipulation
     const ansii = await terminalArt.toAnsii(
         myImageBuffer,
         {
