@@ -1,4 +1,4 @@
-const imageToAnsii = require('./lib/image-to-ansii');
+const { imageToAnsii, gifToAnsii } = require('./lib/image-to-ansii');
 
 /**
  * Console Art
@@ -36,5 +36,8 @@ module.exports = {
     },
     toAnsii(path, options = {}) {
         return imageToAnsii(path, options);
+    },
+    toAnsiiFrames(path, options = {}) {
+        return gifToAnsii(path, options);
     }
 };

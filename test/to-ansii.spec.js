@@ -6,14 +6,14 @@ describe('UNIT - toAnsi', function () {
     const terminalArt = require('../index');
 
     const sampleAnsii = '\u001b[0m\u001b[48;5;9m\u001b[38;5;9m \u001b[0m' +
-            '\u001b[48;5;10m\u001b[38;5;10m \u001b[0m\n';
+            '\u001b[48;5;10m\u001b[38;5;10m \u001b[0m';
     const sampleBuffer = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAACXBIWXM' +
         'AAAsTAAALEwEAmpwYAAAAB3RJTUUH4wIbCwoYRArfTwAAABl0RVh0Q29tbWVudABDcmVhdGV' +
         'kIHdpdGggR0lNUFeBDhcAAAAWSURBVAjXY/jPwMDwn4GRgeH///8MAB72BP1IxgkfAAAAAElFTkSuQmCC', 'base64');
     const samplePath = './test/sample.png';
     const longPath = './test/long.png';
 
-    it('Should faithfully convert a simple image to ansii', function () {
+    it('Should faithfully convert a simple image to ansii', async function () {
         return expect(terminalArt.toAnsii(samplePath))
             .to.eventually.equal(sampleAnsii);
     });

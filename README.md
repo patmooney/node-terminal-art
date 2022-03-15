@@ -37,6 +37,22 @@ Converts popular image formats into a terminal-compatible low-resolution replica
     const compiledAnsiiImage = await fromFile('./save-for-later.txt');
     console.log(compiledAnsiiImage);
 ```
+
+**GIFS? (experimental)**
+```
+const { toAnsiiFrames } = require('./index.js');
+
+async function animate(path) {
+    const frames = await toAnsiiFrames(path);
+    const cls = "\033[2J"; // clear screen
+    const wait = (ms) => new Promise(res => setTimeout(res, ms));
+    for (let frame of frames) {
+        console.log(cls + frame);
+        await wait(100); // 100ms between frames
+    }
+}
+```
+
 ### API ###
 
 #### `toAnsii(filePath, { maxCharWidth?: 40, mimeType?: 'image/png' }): Promise<string>`
