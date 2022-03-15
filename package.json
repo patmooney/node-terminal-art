@@ -1,6 +1,6 @@
 {
   "name": "terminal-art",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Convert popular image formats into terminal compatible ansii art",
   "main": "index.js",
   "directories": {
